@@ -69,13 +69,13 @@ dependencies {
     // Hilt
     implementation "com.google.dagger:hilt-android:$hiltDaggerVersion"
     kapt "com.google.dagger:hilt-compiler:$hiltDaggerVersion"
-    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hiltVersion"
+//    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hiltVersion"
     kapt "androidx.hilt:hilt-compiler:$hiltVersion"
     api "com.google.dagger:dagger-android:$hiltDaggerVersion"
     api "com.google.dagger:dagger-android-support:2.28.1"
     kapt "com.google.dagger:dagger-android-processor:2.23.2"
     implementation "com.google.dagger:dagger:$hiltDaggerVersion"
-    kapt "com.google.dagger:dagger-compiler:2.32"
+    kapt "com.google.dagger:dagger-compiler:$hiltDaggerVersion"
 
     // Coroutine
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion"
