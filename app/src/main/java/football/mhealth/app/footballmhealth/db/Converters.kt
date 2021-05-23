@@ -29,4 +29,16 @@ class Converters {
     fun fromGender(gender: Gender): String {
         return if(gender == Gender.Male) "M" else "F"
     }
+
+    @TypeConverter
+    fun toList(ids: String): List<String> {
+        return ids.split(";")
+    }
+
+    @TypeConverter
+    fun fromList(listIds: List<String>): String {
+        var ids = ""
+        listIds.forEach { ids += ";$it" }
+        return ids
+    }
 }
