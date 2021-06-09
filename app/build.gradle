@@ -69,7 +69,6 @@ dependencies {
     // Hilt
     implementation "com.google.dagger:hilt-android:$hiltDaggerVersion"
     kapt "com.google.dagger:hilt-compiler:$hiltDaggerVersion"
-//    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hiltVersion"
     kapt "androidx.hilt:hilt-compiler:$hiltVersion"
     api "com.google.dagger:dagger-android:$hiltDaggerVersion"
     api "com.google.dagger:dagger-android-support:2.28.1"

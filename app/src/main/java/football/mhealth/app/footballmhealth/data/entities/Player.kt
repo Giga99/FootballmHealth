@@ -1,4 +1,4 @@
-package football.mhealth.app.footballmhealth.entities
+package football.mhealth.app.footballmhealth.data.entities
 
 import android.graphics.Bitmap
 import androidx.room.Entity

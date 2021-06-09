@@ -1,4 +1,4 @@
-package football.mhealth.app.footballmhealth.entities
+package football.mhealth.app.footballmhealth.data.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

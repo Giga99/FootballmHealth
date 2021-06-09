@@ -1,9 +1,9 @@
-package football.mhealth.app.footballmhealth.db
+package football.mhealth.app.footballmhealth.data.db
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import androidx.room.TypeConverter
-import football.mhealth.app.footballmhealth.entities.Gender
+import football.mhealth.app.footballmhealth.data.entities.Gender
 import java.io.ByteArrayOutputStream
 
 class Converters {

@@ -1,10 +1,10 @@
-package football.mhealth.app.footballmhealth.db
+package football.mhealth.app.footballmhealth.data.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import football.mhealth.app.footballmhealth.entities.Game
-import football.mhealth.app.footballmhealth.entities.Player
+import football.mhealth.app.footballmhealth.data.entities.Game
+import football.mhealth.app.footballmhealth.data.entities.Player
 
 @Database(
     entities = [Player::class, Game::class],

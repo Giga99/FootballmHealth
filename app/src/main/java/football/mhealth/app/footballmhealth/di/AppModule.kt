@@ -7,9 +7,9 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import football.mhealth.app.footballmhealth.db.GameDAO
-import football.mhealth.app.footballmhealth.db.HealthDatabase
-import football.mhealth.app.footballmhealth.db.PlayerDAO
+import football.mhealth.app.footballmhealth.data.db.GameDAO
+import football.mhealth.app.footballmhealth.data.db.HealthDatabase
+import football.mhealth.app.footballmhealth.data.db.PlayerDAO
 import football.mhealth.app.footballmhealth.utils.HEALTH_DATABASE_NAME
 import javax.inject.Singleton
 
