@@ -9,14 +9,14 @@ import java.io.ByteArrayOutputStream
 class Converters {
 
     @TypeConverter
-    fun toBitmap(bytes: ByteArray): Bitmap {
-        return BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
+    fun toBitmap(bytes: ByteArray?): Bitmap? {
+        return BitmapFactory.decodeByteArray(bytes, 0, bytes?.size ?: 0)
     }
 
     @TypeConverter
-    fun fromBitmap(bmp: Bitmap): ByteArray {
+    fun fromBitmap(bmp: Bitmap?): ByteArray? {
         val outputStream  = ByteArrayOutputStream()
-        bmp.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
+        bmp?.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
         return outputStream.toByteArray()
     }
 
@@ -31,14 +31,14 @@ class Converters {
     }
 
     @TypeConverter
-    fun toList(ids: String): List<String> {
-        return ids.split(";")
+    fun toList(ids: String?): List<String>? {
+        return ids?.split(";")
     }
 
     @TypeConverter
-    fun fromList(listIds: List<String>): String {
+    fun fromList(listIds: List<String>?): String {
         var ids = ""
-        listIds.forEach { ids += ";$it" }
+        listIds?.forEach { ids += ";$it" }
         return ids
     }
 }
