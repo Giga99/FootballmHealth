@@ -8,7 +8,7 @@ import football.mhealth.app.footballmhealth.data.entities.Player
 
 @Database(
     entities = [Player::class, Game::class],
-    version = 1
+    version = 2
 )
 @TypeConverters(Converters::class)
 abstract class HealthDatabase : RoomDatabase() {

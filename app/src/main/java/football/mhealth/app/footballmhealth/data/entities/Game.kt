@@ -9,9 +9,9 @@ data class Game(
     @PrimaryKey(autoGenerate = true)
     var id: Int? = null,
     val team1Name: String = "",
-    val team1PlayerIds: List<String>? = null,
+    val team1PlayerNames: List<String>? = null,
     val team1NumberOfGoals: Int = 0,
     val team2Name: String = "",
-    val team2PlayerIds: List<String>? = null,
+    val team2PlayerNames: List<String>? = null,
     val team2NumberOfGoals: Int = 0
 )

@@ -22,12 +22,21 @@
         android:id="@+id/allGamesFragment"
         android:name="football.mhealth.app.footballmhealth.presentation.view.fragments.AllGamesFragment"
         android:label="AllGamesFragment"
-        tools:layout="@layout/all_games_fragment" />
+        tools:layout="@layout/all_games_fragment">
+        <action
+            android:id="@+id/action_allGamesFragment_to_addGameFragment"
+            app:destination="@id/addGameFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/allPlayersFragment"
         android:name="football.mhealth.app.footballmhealth.presentation.view.fragments.AllPlayersFragment"
         android:label="AllPlayersFragment"
         tools:layout="@layout/all_players_fragment" />
+    <fragment
+        android:id="@+id/addGameFragment"
+        android:name="football.mhealth.app.footballmhealth.presentation.view.fragments.AddGameFragment"
+        android:label="AddGameFragment"
+        tools:layout="@layout/add_game_fragment" />
 
 </navigation>

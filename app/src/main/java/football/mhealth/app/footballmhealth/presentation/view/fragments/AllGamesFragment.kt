@@ -8,6 +8,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import football.mhealth.app.footballmhealth.databinding.AllGamesFragmentBinding
 import football.mhealth.app.footballmhealth.presentation.view.adapters.GamesRecyclerViewAdapter
 import football.mhealth.app.footballmhealth.presentation.viewmodels.GamesViewModel
+import football.mhealth.app.footballmhealth.utils.safeNavigate
 import football.mhealth.app.footballmhealth.utils.view_binding.ViewBindingFragment
 
 @AndroidEntryPoint
@@ -20,6 +21,8 @@ class AllGamesFragment : ViewBindingFragment<AllGamesFragmentBinding>({
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        gamesViewModel.getAllGames()
+
         with(viewBinding) {
             val gamesRecyclerViewAdapter = GamesRecyclerViewAdapter {
 
@@ -30,9 +33,18 @@ class AllGamesFragment : ViewBindingFragment<AllGamesFragmentBinding>({
                 findNavController().navigateUp()
             }
 
+            fabAdd.setOnClickListener {
+                findNavController().safeNavigate(AllGamesFragmentDirections.actionAllGamesFragmentToAddGameFragment())
+            }
+
             gamesViewModel.allGames.observe(viewLifecycleOwner, {
                 gamesRecyclerViewAdapter.submitList(it)
             })
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        gamesViewModel.getAllGames()
     }
 }
