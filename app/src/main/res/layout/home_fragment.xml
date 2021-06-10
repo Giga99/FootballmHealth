@@ -12,7 +12,7 @@
         android:layout_marginTop="64dp"
         android:layout_marginEnd="32dp"
         android:gravity="center"
-        android:text="Welcome to te mHealth app!"
+        android:text="Welcome to the Football mHealth app!"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

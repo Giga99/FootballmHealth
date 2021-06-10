@@ -65,3 +65,11 @@ capp/src/main/java/football/mhealth/app/footballmhealth/presentation/viewmodels/
 bapp/src/main/java/football/mhealth/app/footballmhealth/presentation/view/fragments/HomeFragment.kt,0\d\0d913a8e6b5d580e3bc82d0261e8eac0234a16e6
 •
 eapp/src/main/java/football/mhealth/app/footballmhealth/presentation/view/fragments/AddGameFragment.kt,8\f\8fb5b9d99387e30529883956e0eb1b409ed00f92
+“
+capp/src/main/java/football/mhealth/app/footballmhealth/presentation/viewmodels/GameInfoViewModel.kt,4\0\40447aca19add8b48367be67e3f7fcbcea7648bb
+–
+fapp/src/main/java/football/mhealth/app/footballmhealth/presentation/view/fragments/GameInfoFragment.kt,c\b\cb9353b863c382cf4b120f394505b140920ec314
+”
+dapp/src/main/java/football/mhealth/app/footballmhealth/presentation/viewmodels/AddPlayerViewModel.kt,9\b\9be5af1a365cef58289202c98eabe599342b0a9c
+—
+gapp/src/main/java/football/mhealth/app/footballmhealth/presentation/view/fragments/AddPlayerFragment.kt,9\d\9d2a5e03b45d4a0a8f8c64f5507b767f0778524d
