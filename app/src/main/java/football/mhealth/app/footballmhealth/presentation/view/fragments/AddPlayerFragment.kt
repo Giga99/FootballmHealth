@@ -22,6 +22,10 @@ class AddPlayerFragment : ViewBindingFragment<AddPlayerFragmentBinding>({
         super.onViewCreated(view, savedInstanceState)
 
         with(viewBinding) {
+            ivBack.setOnClickListener {
+                findNavController().navigateUp()
+            }
+
             btnSubmit.setOnClickListener {
                 val firstName = etFirstName.text.toString()
                 val lastName = etLastName.text.toString()
