@@ -26,6 +26,9 @@
         <action
             android:id="@+id/action_allGamesFragment_to_addGameFragment"
             app:destination="@id/addGameFragment" />
+        <action
+            android:id="@+id/action_allGamesFragment_to_gameInfoFragment"
+            app:destination="@id/gameInfoFragment" />
     </fragment>
 
     <fragment
@@ -33,10 +36,21 @@
         android:name="football.mhealth.app.footballmhealth.presentation.view.fragments.AllPlayersFragment"
         android:label="AllPlayersFragment"
         tools:layout="@layout/all_players_fragment" />
+
     <fragment
         android:id="@+id/addGameFragment"
         android:name="football.mhealth.app.footballmhealth.presentation.view.fragments.AddGameFragment"
         android:label="AddGameFragment"
         tools:layout="@layout/add_game_fragment" />
+
+    <fragment
+        android:id="@+id/gameInfoFragment"
+        android:name="football.mhealth.app.footballmhealth.presentation.view.fragments.GameInfoFragment"
+        android:label="GameInfoFragment"
+        tools:layout="@layout/game_info_fragment" >
+        <argument
+            android:name="gameId"
+            app:argType="string" />
+    </fragment>
 
 </navigation>

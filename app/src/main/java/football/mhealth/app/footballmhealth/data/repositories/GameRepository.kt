@@ -35,4 +35,13 @@ class GameRepository @Inject constructor(
         }
         return Resource.Success(response)
     }
+
+    suspend fun getGameInfo(gameId: String): Resource<Game> {
+        val response = try {
+            gameDAO.getGameInfo(gameId)
+        } catch (e: Exception) {
+            return Resource.Error(e.toString())
+        }
+        return Resource.Success(response)
+    }
 }

@@ -25,7 +25,7 @@ class AllGamesFragment : ViewBindingFragment<AllGamesFragmentBinding>({
 
         with(viewBinding) {
             val gamesRecyclerViewAdapter = GamesRecyclerViewAdapter {
-
+                findNavController().safeNavigate(AllGamesFragmentDirections.actionAllGamesFragmentToGameInfoFragment(it))
             }
             rvAllGames.adapter = gamesRecyclerViewAdapter
 
