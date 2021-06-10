@@ -9,6 +9,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import football.mhealth.app.footballmhealth.databinding.AllPlayersFragmentBinding
 import football.mhealth.app.footballmhealth.presentation.view.adapters.PlayersRecyclerViewAdapter
 import football.mhealth.app.footballmhealth.presentation.viewmodels.PlayersViewModel
+import football.mhealth.app.footballmhealth.utils.safeNavigate
 import football.mhealth.app.footballmhealth.utils.view_binding.ViewBindingFragment
 
 @AndroidEntryPoint
@@ -21,6 +22,8 @@ class AllPlayersFragment : ViewBindingFragment<AllPlayersFragmentBinding>({
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        playersViewModel.getAllPlayers()
+
         with(viewBinding) {
             val playersRecyclerViewAdapter = PlayersRecyclerViewAdapter {
 
@@ -32,9 +35,18 @@ class AllPlayersFragment : ViewBindingFragment<AllPlayersFragmentBinding>({
                 findNavController().navigateUp()
             }
 
+            fabAdd.setOnClickListener {
+                findNavController().safeNavigate(AllPlayersFragmentDirections.actionAllPlayersFragmentToAddPlayerFragment())
+            }
+
             playersViewModel.allPlayers.observe(viewLifecycleOwner, {
                 playersRecyclerViewAdapter.submitList(it)
             })
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        playersViewModel.getAllPlayers()
     }
 }

@@ -20,7 +20,7 @@ class PlayersViewModel @Inject constructor(
     private val _allPlayers = MutableLiveData<List<Player>>()
     val allPlayers: LiveData<List<Player>> = _allPlayers
 
-    init {
+    fun getAllPlayers() {
         viewModelScope.launch {
             when (val response = playersRepository.getAllPlayers()) {
                 is Resource.Success -> {

@@ -35,7 +35,11 @@
         android:id="@+id/allPlayersFragment"
         android:name="football.mhealth.app.footballmhealth.presentation.view.fragments.AllPlayersFragment"
         android:label="AllPlayersFragment"
-        tools:layout="@layout/all_players_fragment" />
+        tools:layout="@layout/all_players_fragment" >
+        <action
+            android:id="@+id/action_allPlayersFragment_to_addPlayerFragment"
+            app:destination="@id/addPlayerFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/addGameFragment"
@@ -52,5 +56,10 @@
             android:name="gameId"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/addPlayerFragment"
+        android:name="football.mhealth.app.footballmhealth.presentation.view.fragments.AddPlayerFragment"
+        android:label="AddPlayerFragment"
+        tools:layout="@layout/add_player_fragment"/>
 
 </navigation>
