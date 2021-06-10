@@ -28,7 +28,6 @@ class AddPlayerViewModel @Inject constructor(
         numberOfYearsPlaying: Int,
         averageHoursWeekly: Double
     ) {
-        println(gender)
         viewModelScope.launch {
             val response = playersRepository.insertPlayer(
                 Player(
